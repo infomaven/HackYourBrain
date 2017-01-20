@@ -50,6 +50,10 @@ pip install image
 ```
 python manage.py createsuperuser
 ```
+ex.
+username: admin
+email: {optional}
+password: 12.345678Jj
 
 ### Command to START app server
 ```
