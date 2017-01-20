@@ -10,18 +10,20 @@ Install Python 2.7
 ```
 pip install virtualenv
 ```
+### Start VirtualEnv (sandbox on local machine)
 ```
 virtualenv env
 ```
-### On Mac:
+ On Mac:
 ```
 source env/bin/activate
 ```
-### On Windows:
+ On Windows:
 ```
 source env\Scripts\activate 
 ```
 
+#### First time only
 Make sure there is a little (env) in front of your prompt before running this> 
 ```
 pip install django && pip install pillow
@@ -46,7 +48,7 @@ Verify  you are running pip version of at least 8.x. Then  run the following:
 pip install image
 ```
 
-### Create an admin:
+Create an admin:
 ```
 python manage.py createsuperuser
 ```
@@ -55,27 +57,39 @@ username: admin,
 email: admin@example.com (optional),
 password: 12.345678Jj
 
-### Command to START app server
+## Usage 
+#### RUN the app
+1. Start virtualenv 
 ```
-python manage.py runserver
+virtualenv
 ```
 
-### Command to STOP app server
+2. Use Mac or Windows instructions for activate command (as described above)
+
+3. Start django
+```
+python manage.py runserver
+
+```
+>>  You are in business!
+
+Browse to [http://localhost:8000/](http://localhost:8000/)
+
+
+
+### STOP app server
 ```
 CTRL-C
 ```
 
-### Command to stop VIRTUALENV
+### Stop VIRTUALENV
 ```
 deactivate
 ```
 
+### Use Admin Panel
+With virtualenv and app server running, browse to [http://localhost:8000/admin/](http://localhost:8000/admin/) and login 
 
-
-## Usage 
-Browse to [http://localhost:8000/admin/](http://localhost:8000/admin/) and login 
-
-#### First time only
+##### First time only
 Use the admin page to upload images from your local machine. Also load models.
 
-Then go to [http://localhost:8000/](http://localhost:8000/)
